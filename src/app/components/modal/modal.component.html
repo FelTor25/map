@@ -1,0 +1,27 @@
+<!-- Contenedor de la modal de compartir -->
+<ng-template #share let-modal class="share">
+  <!-- Contenedor del encabezado de la modal -->
+  <div
+    class="modal-header py-0 px-2 d-flex justify-content-start align-items-center rounded-top border-bottom-0"
+  >
+    <!-- Título de la modal -->
+    <h6 class="title mb-0 ms-1">{{ selection.name }}</h6>
+
+    <!-- Botón de cerrar modal -->
+    <button
+      type="button"
+      class="close p-1 ms-auto border-0 bg-transparent d-flex"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span class="material-symbols-outlined"> close </span>
+    </button>
+  </div>
+
+  <!-- Contenedor del cuerpo de la modal -->
+  <div
+    class="modal-body p-3 mw-100 h-100 d-flex flex-column align-items-center"
+  >
+    {{ selection.description }}
+  </div>
+</ng-template>
