@@ -1,10 +1,12 @@
 <div class="card-group">
   <ng-container *ngFor="let item of cards; let i = index">
     <div class="card" style="width: 18rem">
-      <img [src]="item.image" class="card-img-top" alt="..." />
+      <div class="w-auto">
+        <img [src]="item.image" class="card-img-top" alt="..." />
+      </div>
       <div class="card-body">
         <h5 class="card-title">{{ item.name }}</h5>
-        <p class="card-text">{{ item.description }}</p>
+        <p class="card-text text-lines-2">{{ item.description }}</p>
         <button class="btn btn-primary" (click)="selectCard(i)">
           Más información
         </button>
